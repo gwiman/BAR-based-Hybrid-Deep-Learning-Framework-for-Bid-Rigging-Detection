@@ -1,10 +1,10 @@
 # BAR-based-Hybrid-Deep-Learning-Framework-for-Bid-Rigging-Detection
-# Dataset Description
+# Dataset Description[data_bid_level.csv](https://github.com/user-attachments/files/24364134/data_bid_level.csv)
+
 
 This repository provides a structured dataset for research on bid-rigging detection in public procurement.  
 The dataset is derived from real-world procurement records from the Korean Public Procurement Service (PPS) and legally confirmed bid-rigging cases issued by the Korean Fair Trade Commission (FTC).  
 
-To ensure reproducibility while respecting legal and ethical constraints, the data are anonymized and released in a structured, research-oriented format suitable for machine learning and deep learning studies.
 
 ---
 
@@ -29,7 +29,7 @@ To capture institutional and contextual attributes of each auction, including pr
 
 ---
 
-### 2. First-ranked bidder data (`data_frb.csv`)
+### 2. First-ranked bidder data 
 
 This file contains information related to the first-ranked (winning) bidder for each procurement notice.
 
@@ -43,7 +43,7 @@ To represent the strategic behavior of the winning bidder, which plays a central
 
 ---
 
-### 3. Competing bidder data (`data_cb.csv`)
+### 3. Competing bidder data 
 
 This file contains information for competing bidders ranked second through fifth in each procurement notice.
 
@@ -61,5 +61,52 @@ To capture relative bidding strategies and structural differences between the wi
 
 A core variable in this dataset is the **Bid Adjustment Rate (BAR)**, which quantitatively measures how a bid deviates from institutional pricing thresholds.
 
-The BAR is defined as:
+The BAR is defined as: BAR = (Bid Price / Base Price × 100) − MBAR
+
+
+where MBAR denotes the Minimum Bid Amount Rate applied by the contracting authority.
+
+BAR provides an interpretable indicator of bidding strategy, enabling quantitative comparison between winning and competing bidders and facilitating the detection of abnormal or coordinated bidding behaviors.
+
+---
+
+## Data Linking and Integrity
+
+All three datasets are linked using a common identifier:
+
+- `bid_notice_id`: unique identifier for each procurement notice  
+
+This structure enables flexible modeling approaches, including:
+- Bid-level classification  
+- Relative bidder comparison  
+- Hybrid and parallel deep learning architectures  
+- Future extensions to graph-based detection models  
+
+---
+
+## Anonymization and Ethical Considerations
+
+- Firm identifiers are anonymized and cannot be used to re-identify real entities.  
+- Original procurement records and legally sensitive information are not publicly released.  
+- The dataset is intended strictly for academic and non-commercial research purposes.  
+
+Researchers requiring access to the full dataset for verification or extended analysis may contact the corresponding author.
+
+---
+
+## Intended Use
+
+This dataset is designed to support:
+- Bid-rigging detection research  
+- Machine learning and deep learning model development  
+- Reproducible experiments using structured procurement data  
+- Policy-oriented studies on public procurement integrity  
+
+---
+
+## Notes
+
+- All CSV files are encoded in UTF-8.  
+- Numeric values may be scaled or normalized during model training.  
+- The dataset reflects institutional characteristics of the Korean public procurement system and may require adaptation for cross-country studies.
 
