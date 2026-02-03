@@ -1,5 +1,5 @@
 # BAR-based-Hybrid-Deep-Learning-Framework-for-Bid-Rigging-Detection
-# Dataset Description[data_bid_level.csv](https://github.com/user-attachments/files/24364134/data_bid_level.csv)
+
 
 
 This repository provides a structured dataset for research on bid-rigging detection in public procurement.  
